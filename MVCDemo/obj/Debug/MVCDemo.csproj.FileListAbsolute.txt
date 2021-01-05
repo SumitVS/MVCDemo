@@ -76,3 +76,11 @@ G:\Practice Projects\MVCDemo\MVCDemo\obj\Debug\MVCDemo.csproj.CoreCompileInputs.
 G:\Practice Projects\MVCDemo\MVCDemo\obj\Debug\MVCDemo.csproj.CopyComplete
 G:\Practice Projects\MVCDemo\MVCDemo\obj\Debug\MVCDemo.dll
 G:\Practice Projects\MVCDemo\MVCDemo\obj\Debug\MVCDemo.pdb
+G:\Practice Projects\MVCDemo\MVCDemo\bin\EntityFramework.dll
+G:\Practice Projects\MVCDemo\MVCDemo\bin\EntityFramework.SqlServer.dll
+G:\Practice Projects\MVCDemo\MVCDemo\bin\EntityFramework.xml
+G:\Practice Projects\MVCDemo\MVCDemo\bin\EntityFramework.SqlServer.xml
+G:\Practice Projects\MVCDemo\MVCDemo\obj\Debug\MVCDemo.csprojAssemblyReference.cache
+G:\Practice Projects\MVCDemo\MVCDemo\obj\Debug\MVCDemo.Migrations.initilization.resources
+G:\Practice Projects\MVCDemo\MVCDemo\obj\Debug\MVCDemo.csproj.GenerateResource.cache
+G:\Practice Projects\MVCDemo\MVCDemo\obj\Debug\MVCDemo.Migrations.citytable.resources

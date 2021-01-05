@@ -1,0 +1,16 @@
+﻿
+@{
+    ViewBag.Title = "HardCodedDDL";
+}
+
+<h2>HardCodedDDL</h2>
+
+@Html.DropDownList("Mobiles", new List<SelectListItem>
+                {
+                    new SelectListItem{Text="Redmi",Value="1"},
+                    new SelectListItem{Text="Samsung",Value="2"},
+                    new SelectListItem{Text="Nokia",Value="3",Selected=true},
+                    new SelectListItem{Text="Apple",Value="4"}                    
+                }, "Select Mobile"
+                );
+
