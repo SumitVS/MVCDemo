@@ -189,6 +189,8 @@
     <Content Include="Views\DataAnnotations\Success.cshtml" />
     <Content Include="Views\Shared\AccessDenied.cshtml" />
     <Content Include="Views\DropDownListDemo\HardCodedDDL.cshtml" />
+    <Content Include="Views\DropDownListDemo\DynamicDDL.cshtml" />
+    <Content Include="Views\DropDownListDemo\DynamicDDLWithDynamicJQueryFunction.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
