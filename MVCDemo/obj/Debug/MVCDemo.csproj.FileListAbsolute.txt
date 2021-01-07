@@ -84,3 +84,16 @@ G:\Practice Projects\MVCDemo\MVCDemo\obj\Debug\MVCDemo.csprojAssemblyReference.c
 G:\Practice Projects\MVCDemo\MVCDemo\obj\Debug\MVCDemo.Migrations.initilization.resources
 G:\Practice Projects\MVCDemo\MVCDemo\obj\Debug\MVCDemo.csproj.GenerateResource.cache
 G:\Practice Projects\MVCDemo\MVCDemo\obj\Debug\MVCDemo.Migrations.citytable.resources
+G:\Practice Projects\MVCDemo\MVCDemo\obj\Debug\MVCDemo.Migrations.Employeemodeladded.resources
+G:\Practice Projects\MVCDemo\MVCDemo\bin\ExcelDataReader.DataSet.dll
+G:\Practice Projects\MVCDemo\MVCDemo\bin\ExcelDataReader.dll
+G:\Practice Projects\MVCDemo\MVCDemo\bin\System.Net.Http.Formatting.dll
+G:\Practice Projects\MVCDemo\MVCDemo\bin\System.Web.Http.dll
+G:\Practice Projects\MVCDemo\MVCDemo\bin\System.Web.Http.WebHost.dll
+G:\Practice Projects\MVCDemo\MVCDemo\bin\ExcelDataReader.pdb
+G:\Practice Projects\MVCDemo\MVCDemo\bin\ExcelDataReader.xml
+G:\Practice Projects\MVCDemo\MVCDemo\bin\ExcelDataReader.DataSet.pdb
+G:\Practice Projects\MVCDemo\MVCDemo\bin\ExcelDataReader.DataSet.xml
+G:\Practice Projects\MVCDemo\MVCDemo\bin\System.Net.Http.Formatting.xml
+G:\Practice Projects\MVCDemo\MVCDemo\bin\System.Web.Http.xml
+G:\Practice Projects\MVCDemo\MVCDemo\bin\System.Web.Http.WebHost.xml

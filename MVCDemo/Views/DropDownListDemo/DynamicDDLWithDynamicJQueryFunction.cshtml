@@ -1,7 +1,147 @@
-﻿
+﻿@model MVCDemo.ViewModels.DynamicDDLViewModel
 @{
     ViewBag.Title = "DynamicDDLWithDynamicJQueryFunction";
 }
 
 <h2>DynamicDDLWithDynamicJQueryFunction</h2>
+
+@using (Html.BeginForm("DynamicDDL", "DropDownListDemo", FormMethod.Post))
+{
+    @*@Html.DropDownListFor(m => m.CountryId, new SelectList(Model.Countries, "CountryId", "CountryName"), "Select Country")*@
+    @Html.DropDownListFor(m => m.CountryId, new List<SelectListItem> { }, "Select Country")
+    @Html.DropDownListFor(m => m.StateId, new List<SelectListItem> { }, "Select State")
+    @Html.DropDownListFor(m => m.CityId, new List<SelectListItem> { }, "Select City")
+    <input type="submit" id="btnSubmit" name="btnSubmit" value="Submit" />
+}
+
+<script>
+    $(document).ready(function () {
+        var ddlCountry = $("#CountryId");
+        var ddlState = $("#StateId");
+        var ddlCity = $("#CityId");
+
+         var countryId = @Html.Raw(Json.Encode(Model.CountryId));
+        var stateId = @Html.Raw(Json.Encode(Model.StateId));
+        var CityId = @Html.Raw(Json.Encode(Model.CityId));
+
+
+        fillDDL(ddlCountry, "Country", 0, countryId);      
+        //fillCountriesDDL(countryId);
+
+        ddlCountry.change(function () {
+            ddlCity.html("<option value='0'>Select City</option>");
+            fillDDL(ddlState, "State", ddlCountry.val(), stateId);      
+            //fillStatessDDL(ddlCountry.val(), stateId);
+        });
+        ddlState.change(function () {
+            fillDDL(ddlCity, "City", ddlState.val(), CityId);   
+            //fillCityDDL(ddlState.val(), CityId);
+        });
+
+        if (countryId != "0") {
+            fillDDL(ddlState, "State", countryId, stateId);   
+            //fillStatessDDL(countryId, stateId);
+        }
+
+        if (stateId != "0") {
+            fillDDL(ddlCity, "City", stateId, CityId);   
+            //fillCityDDL(stateId, CityId);
+        }
+
+
+
+        function fillDDL(ddList,entityName,entityid,selectedValue) {
+            $.ajax({
+                type: "post",
+                url: "/DropDownListDemo/FillDDL",
+                data: { Flag: entityName,Id:entityid },
+                dataType:"json",
+                success: function (data) {
+                    ddList.empty();
+                    var listOptions = "";
+                    if (data != null) {
+
+                        listOptions = "<option value='0'>Select Country</option>";
+                        $.each(data, function (index, element) {
+                            listOptions += "<option value=" + element.CountryId + ">" + element.CountryName + "</option>";
+                        });
+
+                    } else {
+                        var listOptions = "<option value='0'>No Records Found</option>";
+                    }
+                    ddList.html(listOptions);
+                    ddList.val(selectedValue);
+                },
+                error: function (error) {
+                    console.log(error);
+                }
+
+            });
+        }
+
+
+
+        //function fillStatessDDL(Id,selectedValue) {
+
+        //    $.ajax({
+        //        type: "post",
+        //        url: "/DropDownListDemo/FillDDL",
+        //        data: { Flag: "State",Id:Id},
+        //        dataType: "json",
+        //        success: function (data) {
+        //            ddlState.empty();
+        //            var StateList = "";
+        //            if (data.length > 0) {
+        //                StateList = "<option value='0'>Select State</option>";
+        //                $.each(data, function (index, element) {
+        //                    StateList += "<option value=" + element.StateId + ">" + element.StateName + "</option>";
+        //                });
+        //            } else {
+        //                StateList = "<option value='0'>No Records Found</option>";
+        //            }
+        //            ddlState.html(StateList);
+        //            ddlState.val(selectedValue);
+        //        },
+        //        error: function (error) {
+        //            console.log(error);
+        //        }
+
+        //    });
+        //}
+
+
+        //function fillCityDDL(Id, selectedValue) {
+
+        //    $.ajax({
+        //        type: "post",
+        //        url: "/DropDownListDemo/FillDDL",
+        //        data: { Flag: "City", Id: Id },
+        //        dataType: "json",
+        //        success: function (data) {
+        //            ddlCity.empty();
+        //            var CityList = "";
+        //            if (data.length > 0) {
+        //                 CityList = "<option value='0'>Select City</option>";
+        //                $.each(data, function (index, element) {
+        //                    CityList += "<option value=" + element.CityId + ">" + element.CityName + "</option>";
+        //                });
+        //            }
+        //            else {
+        //                var CityList = "<option value='0'>No Records Found</option>";
+        //            }
+        //            ddlCity.html(CityList);
+        //            ddlCity.val(selectedValue);
+
+
+        //        },
+        //        error: function (error) {
+        //            console.log(error);
+        //        }
+
+        //    });
+        //}
+
+    });
+
+</script>
 

@@ -8,6 +8,7 @@ using System.Web.Mvc;
 
 namespace MVCDemo.Controllers
 {
+    //https://www.c-sharpcorner.com/UploadFile/4d9083/binding-dropdownlist-in-mvc-in-various-ways-in-mvc-with-data/
     public class DropDownListDemoController : Controller
     {
         private MVCDemoDbContext DB;
